@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const httpClient = axios.create(
     {
-        baseURL: 'https://minhasfinancas10-api.herokuapp.com'
+        baseURL: 'https://borellisoft.com.br'
     }
 )
 
