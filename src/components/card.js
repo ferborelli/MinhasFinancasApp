@@ -2,7 +2,7 @@ import React from 'react'
 
 class Card extends React.Component{
 
-    render(){
+    render(){ 
 
         return(
             <div className="card md-3">
