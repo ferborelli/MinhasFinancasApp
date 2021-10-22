@@ -9,7 +9,7 @@ import ConsultaLancamentos from '../views/lancamentos/consulta-lancamentos'
 import CadastroLancamentos from '../views/lancamentos/cadastro-lancamentos'
 import { AuthConsumer } from '../main/provedorAutenticacao'
 
-function RotaAutenticada({ component: Component,isUsuarioAutenticado , ...props}){
+function RotaAutenticada( { component: Component,isUsuarioAutenticado, ...props } ){
     return (
         <Route {...props} render={ (componentProps) => {
             if(isUsuarioAutenticado) {
@@ -18,12 +18,10 @@ function RotaAutenticada({ component: Component,isUsuarioAutenticado , ...props}
                 )
             } else {
                 return (
-                    <Redirect to={ { pathname : '/login' , state : { from : componentProps.location } } }/>
+                    <Redirect to={ { pathname : '/login' , state : { from: componentProps.location } } }/>
                 )
             }
-        }       
-        }     
-        />
+        }}/>
     )
 }
     

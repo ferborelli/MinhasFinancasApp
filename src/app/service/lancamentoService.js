@@ -26,7 +26,7 @@ export default class LancamentoService extends ApiService {
     }
 
     salvar(lancamento) {
-        return this.post('/',lancamento);
+        return this.post('',lancamento);
     }
 
     atualizar(lancamento) {

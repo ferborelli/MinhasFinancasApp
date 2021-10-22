@@ -3,9 +3,9 @@ import Card from '../components/card'
 import FormGroup from '../components/form-group'
 
 import UsuarioService from '../app/service/usuarioService'
-import LocalStorageService from '../app/service/localstorageService'
 import { mensagemErro } from '../components/toastr'
 import { AuthContext } from '../main/provedorAutenticacao'
+import { withRouter } from 'react-router'
 
 class Login extends React.Component{
 
@@ -23,12 +23,12 @@ class Login extends React.Component{
     entrar = () => {
            this.service.autenticar({
                 email: this.state.email,
-                senha: this.state.senha
+                senha: this.state.senha                
             }).then( response => {
                 this.context.iniciarSessao(response.data)
                 this.props.history.push('/home')
-            }).catch( erro => {
-                mensagemErro(erro.response.data)
+            }).catch( error => {
+                mensagemErro(error.response.data)
             }) 
 
     }
@@ -41,7 +41,7 @@ class Login extends React.Component{
 
         return (
                 <div className="row">
-                  <div className="col-md-6" style={ { position : 'relative',left: '300px' } } >
+                  <div className="col-md-6 offset-md-3">
                         <div className="bs-docs-section">
                             <Card title="Login">                               
                                 <div className="row">
@@ -84,10 +84,10 @@ class Login extends React.Component{
                         </div>
                  </div>
             </div>
-        )        
+        )         
     }
 }
 
 Login.contextType = AuthContext
 
-export default Login
+export default withRouter (Login)

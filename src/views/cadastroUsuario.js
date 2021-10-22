@@ -16,12 +16,12 @@ class CadastroUsuario extends React.Component{
         senhaRepeticao : ''
     }
 
-    constructor() {
+    constructor() { 
         super();
         this.service = new UsuarioService();
     }
  
-    cadastrar = () => {
+    cadastrar = () => { 
 
         const {nome,email,senha,senhaRepeticao} = this.state
  
@@ -39,8 +39,8 @@ class CadastroUsuario extends React.Component{
             .then( response => {
                 mensagemSucesso('Usuário cadastrado com sucesso ! Faça login para acessar o sistema.')
                 this.props.history.push('/login')
-            }).catch( error => {
-                mensagemErro(error.response.data)
+            }).catch( erro => {
+                mensagemErro(erro.response.data)
             });
 
     }

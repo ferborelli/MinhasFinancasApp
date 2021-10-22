@@ -1,0 +1,7 @@
+fernando.borelli@hotmail.com
+
+git remote set-url origin https://[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]@github.com/ferborelli/minhasfinancas-api 
+
+git add .
+git status
+git push origin master
