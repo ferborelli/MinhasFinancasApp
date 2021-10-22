@@ -2,7 +2,7 @@ import React from 'react'
 import NavbarItem from '../components/navbaritem'
 import { AuthConsumer } from '../main/provedorAutenticacao' 
   
-function Navbar(props){
+function Navbar(props){  
  
     return(
         <div className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary" >
