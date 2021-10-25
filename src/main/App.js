@@ -9,7 +9,7 @@ import Navbar from '../components/navebar'
 import Rotas from './rotas'
 import ProvedorAutenticacao from './provedorAutenticacao'
 
-import 'toastr/build/toastr.min.js'
+import 'toastr/build/toastr.min.js' 
 
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
