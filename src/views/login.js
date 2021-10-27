@@ -5,7 +5,7 @@ import FormGroup from '../components/form-group'
 import UsuarioService from '../app/service/usuarioService'
 import { mensagemErro } from '../components/toastr'
 import { AuthContext } from '../main/provedorAutenticacao'
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router-dom'
 
 class Login extends React.Component{
 
@@ -70,8 +70,7 @@ class Login extends React.Component{
                                                 </FormGroup>
                                                 <button onClick={this.entrar} 
                                                         className="btn btn-success">
-                                                        <i className='pi pi-sign-in'></i> Entrar
-                                                </button>
+                                                        <i className='pi pi-sign-in'></i> Entrar</button>
                                                 <button onClick={this.prepareCadastrar} 
                                                         className="btn btn-danger">
                                                         <i className='pi pi-plus'></i> Cadastrar

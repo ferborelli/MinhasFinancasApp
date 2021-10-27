@@ -5,7 +5,7 @@ import 'bootswatch/dist/flatly/bootstrap.css'
 import '../custon.css'
 import 'toastr/build/toastr.css'
 
-import Navbar from '../components/navebar'
+import Navbar from '../components/navbar'
 import Rotas from './rotas'
 import ProvedorAutenticacao from './provedorAutenticacao'
 
@@ -15,7 +15,6 @@ import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
-import { Button } from 'primereact/button';   
 
 class  App extends React.Component {
    render(){

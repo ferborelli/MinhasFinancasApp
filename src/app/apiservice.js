@@ -1,17 +1,20 @@
 import axios from 'axios'
 
-const baseURL = process.env.REACT_APP_API_URL
- 
+  
 export const httpClient = axios.create(
     {
-      //  baseURL: 'http://borellisoft.com.br' 
-        baseURL: baseURL,withCredentials: true
+        baseURL: 'http://borellisoft.com.br' ,
+        //baseURL: 'http://localhost:8080' ,
+        //baseURL: baseURL,
+        withCredentials: true
+        
     }
 )
 
 class ApiService {
     
     constructor(apiurl) {
+
         this.apiurl = apiurl;
     }
 
